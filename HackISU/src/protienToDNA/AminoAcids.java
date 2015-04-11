@@ -1,18 +1,13 @@
 package protienToDNA;
 
-import java.io.File;
-import java.util.Scanner;
+public class AminoAcids {
 
-public class ReadAminoAcids {
-	File file = new File("blast.txt");
-	public static String DNAsequence(scanner) {
+	public static String DNAsequence(String a) {
 		// result will save the string being built
 		String result = "";
 		// get rid of spaces
 		a.replaceAll(" ", "");
 		int i = 0;
-		while(scanner.hasNextLine()){
-			String line = scanner.nextLine();
 		// while loop thats valid till end of the string
 		while (i < a.length()) {
 			// check for numbers which are skipped
@@ -23,12 +18,10 @@ public class ReadAminoAcids {
 			else if (Character.isLetter(a.charAt(i))) {
 				result = result + aminoAcid(a.charAt(i));
 			}
-			//move on 
+			// move on
 			i++;
 		}
-		}
 		return result;
-
 	}
 
 	public static String aminoAcid(char a) {
