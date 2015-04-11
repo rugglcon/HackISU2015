@@ -1,7 +1,7 @@
 package protienToDNA;
 
 public class ReadAminoAcids {
-
+	File file = new File("blast.txt");
 	public static String DNAsequence(String a) {
 		// result will save the string being built
 		String result = "";
