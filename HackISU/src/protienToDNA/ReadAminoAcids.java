@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class ReadAminoAcids {
 	File file = new File("blast.txt");
-	Scanner scanner = new Scanner(file);
 	public static String DNAsequence(scanner) {
 		// result will save the string being built
 		String result = "";
