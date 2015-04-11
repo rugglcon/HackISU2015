@@ -110,7 +110,7 @@ public class ReadAminoAcids {
 		}
 		// no amino acid check
 		else {
-			return Character.toString(a) + "not a vailid amino acid";
+			return Character.toString(a) + " is not a vailid amino acid ";
 		}
 	}
 }
