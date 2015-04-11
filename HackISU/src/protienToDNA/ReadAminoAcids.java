@@ -2,7 +2,7 @@ package protienToDNA;
 
 public class ReadAminoAcids {
 
-	public String sequence(String a) {
+	public static String DNAsequence(String a) {
 		// result will save the string being built
 		String result = "";
 		// get rid of spaces
@@ -25,7 +25,7 @@ public class ReadAminoAcids {
 
 	}
 
-	public String aminoAcid(char a) {
+	public static String aminoAcid(char a) {
 		String result = "";
 		// alanine check
 		if (a == 'a' || a == 'A') {
