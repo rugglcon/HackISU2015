@@ -2,12 +2,15 @@ package protienToDNA;
 
 public class ReadAminoAcids {
 	File file = new File("blast.txt");
-	public static String DNAsequence(String a) {
+	Scanner scanner = new Scanner(file);
+	public static String DNAsequence(file) {
 		// result will save the string being built
 		String result = "";
 		// get rid of spaces
 		a.replaceAll(" ", "");
 		int i = 0;
+		while(scanner.hasNextLine()){
+			String line = scanner.nextLine();
 		// while loop thats valid till end of the string
 		while (i < a.length()) {
 			// check for numbers which are skipped
@@ -20,6 +23,7 @@ public class ReadAminoAcids {
 			}
 			//move on 
 			i++;
+		}
 		}
 		return result;
 
