@@ -1,4 +1,4 @@
-package protienToDNA;
+package dna_conversions;
 
 public class AminoAcids {
 

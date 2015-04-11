@@ -1,4 +1,4 @@
-package protienToDNA;
+package dna_conversions;
 
 import java.io.File;
 import java.util.Scanner;
