@@ -17,10 +17,8 @@ public class ReadAminoAcids {
 			// if it is a letter find corresponding amino acid
 			else if (Character.isLetter(a.charAt(i))) {
 				result = result + aminoAcid(a.charAt(i));
-			} else {
-
 			}
-
+			//move on 
 			i++;
 		}
 		return result;
@@ -35,7 +33,7 @@ public class ReadAminoAcids {
 			return result;
 		}// serine check
 		else if (a == 's' || a == 'S') {
-			result = result + "(UCx,AGU,AGC)";
+			result = result + "(UCx,AGU,AGC) ";
 			return result;
 		}// threonine check
 		else if (a == 't' || a == 'T') {
@@ -63,7 +61,7 @@ public class ReadAminoAcids {
 			return result;
 		}// cysteine check
 		else if (a == 'c' || a == 'C') {
-			result = result + "(UGU,UGC)";
+			result = result + "(UGU,UGC) ";
 			return result;
 		}// tryptophane check
 		else if (a == 'w' || a == 'W') {
@@ -71,26 +69,48 @@ public class ReadAminoAcids {
 			return result;
 		}// aspartic check
 		else if (a == 'd' || a == 'D') {
-			result = result + "(GAU,GAC)";
+			result = result + "(GAU,GAC) ";
 			return result;
 		}// glutamine check
 		else if (a == 'e' || a == 'E') {
-			result = result + "(GAA,GAG)";
+			result = result + "(GAA,GAG) ";
 			return result;
 		}// asparagine check
 		else if (a == 'n' || a == 'N') {
-			result = result + "(GAU,GAC)";
+			result = result + "(GAU,GAC) ";
 			return result;
 		}// glutamine check
 		else if (a == 'q' || a == 'Q') {
-			result = result + "(CAA,CAG)";
+			result = result + "(CAA,CAG) ";
 			return result;
 		}// glycine check
 		else if (a == 'g' || a == 'G') {
-			result = result + "(GGx)";
+			result = result + "(GGx) ";
 			return result;
-		}//
-
-		return result;
+		}// isoleucine check
+		else if (a == 'i' || a == 'I') {
+			result = result + "(AUU,AUC,AUA) ";
+			return result;
+		}// phenylalanine check
+		else if (a == 'f' || a == 'F') {
+			result = result + "(UUU,UUC) ";
+			return result;
+		}// arginine check
+		else if (a == 'r' || a == 'R') {
+			result = result + "(CGx,AGA,AGG) ";
+			return result;
+		}// lysine check
+		else if (a == 'k' || a == 'K') {
+			result = result + "(AAA,AAG) ";
+			return result;
+		}// histidine check
+		else if (a == 'h' || a == 'H') {
+			result = result + "(CAU,CAC) ";
+			return result;
+		}
+		// no amino acid check
+		else {
+			return Character.toString(a) + "not a vailid amino acid";
+		}
 	}
 }
