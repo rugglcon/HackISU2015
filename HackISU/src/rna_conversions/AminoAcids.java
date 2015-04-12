@@ -6,7 +6,7 @@ public class AminoAcids {
 		// result will save the string being built
 		String result = "";
 		// get rid of spaces
-		a.replaceAll(" ", "");
+		a = a.replaceAll(" ", "");
 		int i = 0;
 		// while loop thats valid till end of the string
 		while (i < a.length()) {
@@ -109,7 +109,7 @@ public class AminoAcids {
 		}
 		// no amino acid check
 		else {
-			return Character.toString(a) + " is not a vailid amino acid ";
+			return Character.toString(a) + " is not a valid amino acid ";
 		}
 	}
 }
