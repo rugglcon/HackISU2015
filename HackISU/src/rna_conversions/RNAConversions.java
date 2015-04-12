@@ -20,12 +20,12 @@ import java.awt.event.InputMethodEvent;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-public class DNAConversions extends JApplet {
+public class RNAConversions extends JApplet {
 
 	/**
 	 * Create the applet.
 	 */
-	public DNAConversions() {
+	public RNAConversions() {
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[]{0, 0};
 		gridBagLayout.rowHeights = new int[]{0, 0};

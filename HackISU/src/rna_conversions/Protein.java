@@ -6,22 +6,30 @@ public class Protein{
 	String result = "";
 	// get rid of spaces
 	a.replaceAll(" ", "");
+	
 	int i = 0;
 	// while loop thats valid till end of the string
 	while (i < a.length()) {
+		String s = "";
 		// check for numbers which are skipped
 		if (Character.isDigit(a.charAt(i))) {
 			i++;
 		}
 		// if it is a letter find corresponding amino acid
-		else if (Character.isLetter(a.charAt(i))) {
-			//result = result + getProtein(a.charAt(i));
+		else if (a.charAt(i) == '(') {
+			int j = i + 1;
+			while(a.charAt(j) != ')'){
+				j++;
+			}
+			s = a.substring(i, j);
+			i = j+1;
+			result = result + getProtein(s); 
 		}
-		else if (a.charAt(i) == '('){
-			
+		else if (Character.isAlphabetic(a.charAt(i))){
+			s = a.substring(i, i+2);
+			i = i+3;
+			result = result + getProtein(s);
 		}
-		// move on
-		i=+3;
 	}
 	return result;
 }
