@@ -1,4 +1,4 @@
-package dna_conversions;
+package rna_conversions;
 
 import java.awt.Font;
 import java.awt.GridBagConstraints;

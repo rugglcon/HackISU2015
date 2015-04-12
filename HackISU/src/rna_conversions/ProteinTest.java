@@ -1,4 +1,4 @@
-package dna_conversions;
+package rna_conversions;
 
 import java.io.File;
 import java.util.Scanner;

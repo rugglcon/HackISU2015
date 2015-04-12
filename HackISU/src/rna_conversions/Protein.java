@@ -1,4 +1,4 @@
-package dna_conversions;
+package rna_conversions;
 
 public class Protein{
 	public static String protein(String a) {
@@ -47,16 +47,16 @@ public static String getProtein(String a) {
 		result = result + "V";
 		return result;
 	}// leucine check
-	else if (a == 'l' || a == 'L') {
-		result = result + "(CUx,UUA,UUG) ";
+	else if (a.equals("(CUx,UUA,UUG)") || a.equals("CUU") || a.equals("CUC") || a.equals("CUA") || a.equals("CCG") || a.equals("UUA") || a.equals("UUG")) {
+		result = result + "L";
 		return result;
 	}// methionine check
-	else if (a == 'm' || a == 'M') {
-		result = result + "AUG ";
+	else if (a.equals("AUG")) {
+		result = result + "M";
 		return result;
 	}// tyrosine check
-	else if (a == 'y' || a == 'Y') {
-		result = result + "(UAU,UAC) ";
+	else if (a.equals("UAU") || a.equals("UAC") || a.equals("(UAU,UAC)")) {
+		result = result + "Y";
 		return result;
 	}// cysteine check
 	else if (a == 'c' || a == 'C') {

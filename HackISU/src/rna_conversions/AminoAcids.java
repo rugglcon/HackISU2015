@@ -1,4 +1,4 @@
-package dna_conversions;
+package rna_conversions;
 
 public class AminoAcids {
 
