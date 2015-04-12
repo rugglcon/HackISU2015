@@ -17,6 +17,9 @@ public class Protein{
 		else if (Character.isLetter(a.charAt(i))) {
 			//result = result + getProtein(a.charAt(i));
 		}
+		else if (a.charAt(i) == '('){
+			
+		}
 		// move on
 		i=+3;
 	}
