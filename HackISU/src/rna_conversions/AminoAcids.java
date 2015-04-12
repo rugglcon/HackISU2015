@@ -1,5 +1,7 @@
 package rna_conversions;
 
+import java.math.BigInteger;
+
 public class AminoAcids {
 
 	public static String RNAsequence(String a) {
@@ -111,5 +113,36 @@ public class AminoAcids {
 		else {
 			return Character.toString(a) + " is not a valid amino acid ";
 		}
+	}
+	
+	public static BigInteger countSequences(String a){
+		a = a.replaceAll(" ", ""); // remove spaces
+		BigInteger result = BigInteger.valueOf(1);
+		int i=0;
+		while(i < a.length()){
+			if(a.charAt(i) == '('){
+				// if next character is a parenthesis search then
+				// for matching pair and count number of possibilities
+				int j = i + 1;
+				while(a.charAt(j) != ')' && j < a.length()){
+					j++; // keep searching for the matching ')' character
+				}
+				// each option is separated by a comma so count options
+				String s1 = a.substring(i,j+1);
+				String s2 = s1.replace(",", "");
+				int options = (s1.length() - s2.length()) + 1;
+				result = result.multiply(BigInteger.valueOf(options));
+				i = j + 1; // update i to be the character after the ')'
+			} else if(a.charAt(i) == 'x' || a.charAt(i) == 'X'){
+				// an X adds 4 possibilities
+				result = result.multiply(BigInteger.valueOf(4));
+				// move on to next character
+				i++;
+			} else {
+				// not a special character move on
+				i++;
+			}
+		}
+		return result;
 	}
 }

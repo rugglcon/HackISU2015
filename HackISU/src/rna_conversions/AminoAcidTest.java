@@ -15,6 +15,8 @@ public class AminoAcidTest {
 			data = data + line;
 		}
 		scanner.close();
-		System.out.println(AminoAcids.RNAsequence(data));
+		String seq = AminoAcids.RNAsequence(data);
+		System.out.println(seq);
+		System.out.println(AminoAcids.countSequences(seq));
 	}
 }
