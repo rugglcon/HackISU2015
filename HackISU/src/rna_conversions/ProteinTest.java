@@ -15,6 +15,6 @@ public class ProteinTest {
 			data = data + line;
 		}
 		scanner.close();
-		System.out.println(AminoAcids.DNAsequence(data));
+		System.out.println(AminoAcids.RNAsequence(data));
 	}
 }

@@ -2,7 +2,7 @@ package rna_conversions;
 
 public class AminoAcids {
 
-	public static String DNAsequence(String a) {
+	public static String RNAsequence(String a) {
 		// result will save the string being built
 		String result = "";
 		// get rid of spaces
@@ -84,7 +84,7 @@ public class AminoAcids {
 			return result;
 		}// glycine check
 		else if (a == 'g' || a == 'G') {
-			result = result + "(GGx) ";
+			result = result + "GGx ";
 			return result;
 		}// isoleucine check
 		else if (a == 'i' || a == 'I') {

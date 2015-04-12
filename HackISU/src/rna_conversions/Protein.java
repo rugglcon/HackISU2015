@@ -59,57 +59,57 @@ public static String getProtein(String a) {
 		result = result + "Y";
 		return result;
 	}// cysteine check
-	else if (a == 'c' || a == 'C') {
-		result = result + "(UGU,UGC) ";
+	else if (a.equals("UGU") || a.equals("UGC") || a.equals("(UAU,UAC)")) {
+		result = result + "C";
 		return result;
 	}// tryptophane check
-	else if (a == 'w' || a == 'W') {
-		result = result + "UGG ";
+	else if (a.equalsIgnoreCase("UGG")) {
+		result = result + "W";
 		return result;
 	}// aspartic check
-	else if (a == 'd' || a == 'D') {
-		result = result + "(GAU,GAC) ";
+	else if (a.equals("GAU") || a.equals("GAC") ||a.equals("(UGU,UGC)")) {
+		result = result + "D";
 		return result;
 	}// glutamine check
-	else if (a == 'e' || a == 'E') {
-		result = result + "(GAA,GAG) ";
+	else if (a.equals("GAA") || a.equals("GAG") || a.equals("(GAA,GAG)")) {
+		result = result + "E";
 		return result;
 	}// asparagine check
-	else if (a == 'n' || a == 'N') {
-		result = result + "(GAU,GAC) ";
+	else if (a.equals("GAU") || a.equals("GAC") || a.equals("(GAU,GAC)")) {
+		result = result + "N";
 		return result;
 	}// glutamine check
-	else if (a == 'q' || a == 'Q') {
-		result = result + "(CAA,CAG) ";
+	else if (a.equals("CAA") || a.equals("CAG") || a.equals("(CAA,CAG)")) {
+		result = result + "Q";
 		return result;
 	}// glycine check
-	else if (a == 'g' || a == 'G') {
-		result = result + "(GGx) ";
+	else if (a.equals("GGG") || a.equals("GGU") || a.equals("GGC") || a.equals("GGA") || a.equals("GGx")) {
+		result = result + "G";
 		return result;
 	}// isoleucine check
-	else if (a == 'i' || a == 'I') {
-		result = result + "(AUU,AUC,AUA) ";
+	else if (a.equals("AUU") || a.equals("AUC") || a.equals("AUA") || a.equals("(AUU,AUC,AUA)")) {
+		result = result + "I";
 		return result;
 	}// phenylalanine check
-	else if (a == 'f' || a == 'F') {
-		result = result + "(UUU,UUC) ";
+	else if (a.equals("UUU") || a.equals("UUC") || a.equals("(UUU,UUC)")) {
+		result = result + "F";
 		return result;
 	}// arginine check
-	else if (a == 'r' || a == 'R') {
-		result = result + "(CGx,AGA,AGG) ";
+	else if (a.equals("CGx") || a.equals("CGC") || a.equals("CGG") || a.equals("CGA") || a.equals("CGU") || a.equals("AGA") || a.equals("AGG") || a.equals("(CGx,AGA,AGG)")) {
+		result = result + "R";
 		return result;
 	}// lysine check
-	else if (a == 'k' || a == 'K') {
-		result = result + "(AAA,AAG) ";
+	else if (a.equals("AAA") || a.equals("AAG") || a.equals("(AAA,AAG)")) {
+		result = result + "K";
 		return result;
 	}// histidine check
-	else if (a == 'h' || a == 'H') {
-		result = result + "(CAU,CAC) ";
+	else if (a.equals("CAU") || a.equals("CAC") || a.equals("(AAA,AAG)")) {
+		result = result + "H";
 		return result;
 	}
 	// no amino acid check
 	else {
-		return Character.toString(a) + " is not a vailid amino acid ";
+		return a + " is not a vailid amino acid ";
 	}
 }
 }

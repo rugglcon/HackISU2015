@@ -120,7 +120,7 @@ public class DNAConversions extends JApplet {
 		p2dButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				String dna = AminoAcids.DNAsequence(proteinFieldInput.getText());
+				String dna = AminoAcids.RNAsequence(proteinFieldInput.getText());
 				dnaFieldOutput.setText(dna);
 			}
 		});
@@ -188,7 +188,7 @@ public class DNAConversions extends JApplet {
 		d2pButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				String protein = AminoAcids.DNAsequence(dnaFieldInput.getText());
+				String protein = AminoAcids.RNAsequence(dnaFieldInput.getText());
 				proteinFieldOutput.setText(protein);
 			}
 		});
