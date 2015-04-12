@@ -15,7 +15,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
-import javax.swing.JTextPane;
+import javax.swing.JTextArea;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.SwingConstants;
 
@@ -24,9 +24,6 @@ import java.math.BigInteger;
 
 public class RNAConversions extends JApplet {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -82,7 +79,8 @@ public class RNAConversions extends JApplet {
 		gbc_scrollPane_2.gridy = 2;
 		tab1.add(scrollPane_2, gbc_scrollPane_2);
 		
-		JTextPane proteinFieldInput = new JTextPane();
+		final JTextArea proteinFieldInput = new JTextArea();
+		proteinFieldInput.setLineWrap(true);
 		proteinFieldInput.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		scrollPane_2.setViewportView(proteinFieldInput);
 		
@@ -94,7 +92,7 @@ public class RNAConversions extends JApplet {
 		gbc_lblNewLabel.gridy = 3;
 		tab1.add(lblNewLabel, gbc_lblNewLabel);
 		
-		JButton p2dButton = new JButton("Convert");
+		final JButton p2dButton = new JButton("Convert");
 		p2dButton.setEnabled(false);
 		p2dButton.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		
@@ -107,7 +105,8 @@ public class RNAConversions extends JApplet {
 		gbc_scrollPane_3.gridy = 4;
 		tab1.add(scrollPane_3, gbc_scrollPane_3);
 		
-		JTextPane dnaFieldOutput = new JTextPane();
+		final JTextArea dnaFieldOutput = new JTextArea();
+		dnaFieldOutput.setLineWrap(true);
 		dnaFieldOutput.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		dnaFieldOutput.setEditable(false);
 		scrollPane_3.setViewportView(dnaFieldOutput);
@@ -171,7 +170,8 @@ public class RNAConversions extends JApplet {
 		gbc_scrollPane.gridy = 2;
 		tab2.add(scrollPane, gbc_scrollPane);
 		
-		JTextPane dnaFieldInput = new JTextPane();
+		final JTextArea dnaFieldInput = new JTextArea();
+		dnaFieldInput.setLineWrap(true);
 		dnaFieldInput.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		scrollPane.setViewportView(dnaFieldInput);
 		
@@ -192,12 +192,13 @@ public class RNAConversions extends JApplet {
 		gbc_scrollPane_1.gridy = 4;
 		tab2.add(scrollPane_1, gbc_scrollPane_1);
 		
-		JTextPane proteinFieldOutput = new JTextPane();
+		final JTextArea proteinFieldOutput = new JTextArea();
+		proteinFieldOutput.setLineWrap(true);
 		proteinFieldOutput.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		proteinFieldOutput.setEditable(false);
 		scrollPane_1.setViewportView(proteinFieldOutput);
 		
-		JButton d2pButton = new JButton("Convert");
+		final JButton d2pButton = new JButton("Convert");
 		d2pButton.setEnabled(false);
 		d2pButton.addMouseListener(new MouseAdapter() {
 			@Override
@@ -249,9 +250,10 @@ public class RNAConversions extends JApplet {
 		gbc_lblRna.gridy = 1;
 		tab3.add(lblRna, gbc_lblRna);
 		
-		JTextPane txtpnKeyRnaSequnce = new JTextPane();
+		JTextArea txtpnKeyRnaSequnce = new JTextArea();
+		txtpnKeyRnaSequnce.setLineWrap(true);
 		txtpnKeyRnaSequnce.setFont(new Font("Times New Roman", Font.PLAIN, 14));
-		txtpnKeyRnaSequnce.setText("Key:\r\nRNA sequence is in a compacted form where x denotes the possibility of all four bases. \r\nExample:\r\nCCx is the compacted form of: CCC, CCA, CCU, and CCG with all four coding for the same amino acid.\r\nWhere parentheses are used it is because the any of the base sequences are possible.\r\nExample:\r\n(CAU, CAC) either can be used to code for H.");
+		txtpnKeyRnaSequnce.setText("RNA sequence is in a compacted form where x denotes the possibility of all four bases. \r\nExample:\r\nCCx is the compacted form of: CCC, CCA, CCU, and CCG with all four coding for the same amino acid.\r\nParentheses are used to denote a series of possible base sequences.\r\nExample:\r\n(CAU, CAC) either can be used to code for H.");
 		txtpnKeyRnaSequnce.setEditable(false);
 		GridBagConstraints gbc_txtpnKeyRnaSequnce = new GridBagConstraints();
 		gbc_txtpnKeyRnaSequnce.insets = new Insets(0, 0, 5, 0);
@@ -268,7 +270,8 @@ public class RNAConversions extends JApplet {
 		gbc_lblNewLabel_5.gridy = 3;
 		tab3.add(lblNewLabel_5, gbc_lblNewLabel_5);
 		
-		JTextPane txtpnAminoAcidCodon = new JTextPane();
+		JTextArea txtpnAminoAcidCodon = new JTextArea();
+		txtpnAminoAcidCodon.setLineWrap(true);
 		txtpnAminoAcidCodon.setText("Amino Acid codon matching from 5' to 3' on page 420 of:\r\nPierce, Benjamin A. Genetics A Conceptual Approach. 4th. Houndsmills: W.H. Freeman and Company, 2014.");
 		txtpnAminoAcidCodon.setEditable(false);
 		txtpnAminoAcidCodon.setFont(new Font("Times New Roman", Font.PLAIN, 14));
@@ -287,8 +290,9 @@ public class RNAConversions extends JApplet {
 		gbc_lblNewLabel_6.gridy = 5;
 		tab3.add(lblNewLabel_6, gbc_lblNewLabel_6);
 		
-		JTextPane txtpnHttpsgithubcomabradihhackisu = new JTextPane();
+		JTextArea txtpnHttpsgithubcomabradihhackisu = new JTextArea();
 		txtpnHttpsgithubcomabradihhackisu.setEditable(false);
+		txtpnHttpsgithubcomabradihhackisu.setLineWrap(true);
 		txtpnHttpsgithubcomabradihhackisu.setText("https://github.com/abradih/HackISU2015");
 		txtpnHttpsgithubcomabradihhackisu.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		GridBagConstraints gbc_txtpnHttpsgithubcomabradihhackisu = new GridBagConstraints();
