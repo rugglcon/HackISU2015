@@ -64,7 +64,7 @@ public class Protein {
 		}// leucine check
 		else if (a.equalsIgnoreCase("(CUx,UUA,UUG)") || a.equalsIgnoreCase("CUU")
 				|| a.equalsIgnoreCase("CUC") || a.equalsIgnoreCase("CUA") || a.equalsIgnoreCase("CCG")
-				|| a.equalsIgnoreCase("UUA") || a.equalsIgnoreCase("UUG")) {
+				|| a.equalsIgnoreCase("UUA") || a.equalsIgnoreCase("UUG") || a.equalsIgnoreCase("CUG")) {
 			result = result + "L";
 			return result;
 		}// methionine check
